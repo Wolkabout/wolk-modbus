@@ -1,0 +1,243 @@
+\hypertarget{driver__init_8h}{}\section{driver\+\_\+init.\+h File Reference}
+\label{driver__init_8h}\index{driver\+\_\+init.\+h@{driver\+\_\+init.\+h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___firmware_gac260f4e3fdc195e24211f88ed511cf95}{F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}}~0
+\item 
+\#define \mbox{\hyperlink{group___firmware_ga4d15f2bd6406aef36866960b4a6690a2}{F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}}~1
+\item 
+\#define \mbox{\hyperlink{group___firmware_ga08bf7fdb1aa8e63f314631f5926e10e7}{F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+P\+A\+T\+CH}}~2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{driver__init_8h_af4e1ab840f6e99b645ee7ba6a2977be3}{rs485\+\_\+interface\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Init interfaces for R\+S-\/485 communication\+: U\+S\+A\+RT. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{driver__init_8h_a543fcc6df3ddd976e52a923bcdb61505}{write\+\_\+byte}} (const uint8\+\_\+t $\ast$const buf)
+\begin{DoxyCompactList}\small\item\em Write One byte on selected U\+S\+A\+RT interface. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{driver__init_8h_a51a480b70d8a5baac36017ca58cf974c}{read\+\_\+byte}} (uint8\+\_\+t $\ast$const buf)
+\begin{DoxyCompactList}\small\item\em Read One byte from selected U\+S\+A\+RT interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{driver__init_8h_ab67bdf30284bb3029f490ce87644c786}{usart\+\_\+enable}} (void)
+\begin{DoxyCompactList}\small\item\em Enable U\+S\+A\+RT interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{driver__init_8h_a776d70154bc52a4e1367f3477b8d7056}{usart\+\_\+disable}} (void)
+\begin{DoxyCompactList}\small\item\em Disable U\+S\+A\+RT interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{driver__init_8h_a7bd81213793b880943df7412b3b27fd7}{gpio\+\_\+set\+\_\+re\+\_\+pin\+\_\+level}} (bool state)
+\begin{DoxyCompactList}\small\item\em G\+P\+IO interface for controlling RE pin of R\+S-\/485 driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{driver__init_8h_ab98d326ff99b438d6b597b91cb794c8e}{gpio\+\_\+set\+\_\+de\+\_\+pin\+\_\+level}} (bool state)
+\begin{DoxyCompactList}\small\item\em G\+P\+IO interface for controlling DE pin of R\+S-\/485 driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{driver__init_8h_ab72fc3505dc15f487c8ed6805dd5792f}{led\+\_\+tx}} (bool state)
+\begin{DoxyCompactList}\small\item\em Signal L\+ED used for presenting U\+S\+A\+RT occupancy while sending bytes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{driver__init_8h_a0e2042998b46f94173afbdccba3f46e7}{led\+\_\+rx}} (bool state)
+\begin{DoxyCompactList}\small\item\em Signal L\+ED used for presenting U\+S\+A\+RT occupancy while receiving bytes. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{driver__init_8h_a8f63fd31eb9ecde9b82e0ac6242ce1ad}{timer\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Timer setup. This timer is used by Mod\+Bus library to timeout incoming traffic. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{driver__init_8h_a60a9a30a5d76665079791ca7cc91b7b0}{timer\+\_\+start}} ()
+\begin{DoxyCompactList}\small\item\em Start selected timer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{driver__init_8h_a55d4933921d31503bc8287d7a8493402}{timer\+\_\+stop}} ()
+\begin{DoxyCompactList}\small\item\em Stop selected timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{driver__init_8h_ab98d326ff99b438d6b597b91cb794c8e}\label{driver__init_8h_ab98d326ff99b438d6b597b91cb794c8e}} 
+\index{driver\+\_\+init.\+h@{driver\+\_\+init.\+h}!gpio\+\_\+set\+\_\+de\+\_\+pin\+\_\+level@{gpio\+\_\+set\+\_\+de\+\_\+pin\+\_\+level}}
+\index{gpio\+\_\+set\+\_\+de\+\_\+pin\+\_\+level@{gpio\+\_\+set\+\_\+de\+\_\+pin\+\_\+level}!driver\+\_\+init.\+h@{driver\+\_\+init.\+h}}
+\subsubsection{\texorpdfstring{gpio\+\_\+set\+\_\+de\+\_\+pin\+\_\+level()}{gpio\_set\_de\_pin\_level()}}
+{\footnotesize\ttfamily void gpio\+\_\+set\+\_\+de\+\_\+pin\+\_\+level (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+G\+P\+IO interface for controlling DE pin of R\+S-\/485 driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Can be true or false.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{driver__init_8h_a7bd81213793b880943df7412b3b27fd7}\label{driver__init_8h_a7bd81213793b880943df7412b3b27fd7}} 
+\index{driver\+\_\+init.\+h@{driver\+\_\+init.\+h}!gpio\+\_\+set\+\_\+re\+\_\+pin\+\_\+level@{gpio\+\_\+set\+\_\+re\+\_\+pin\+\_\+level}}
+\index{gpio\+\_\+set\+\_\+re\+\_\+pin\+\_\+level@{gpio\+\_\+set\+\_\+re\+\_\+pin\+\_\+level}!driver\+\_\+init.\+h@{driver\+\_\+init.\+h}}
+\subsubsection{\texorpdfstring{gpio\+\_\+set\+\_\+re\+\_\+pin\+\_\+level()}{gpio\_set\_re\_pin\_level()}}
+{\footnotesize\ttfamily void gpio\+\_\+set\+\_\+re\+\_\+pin\+\_\+level (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+G\+P\+IO interface for controlling RE pin of R\+S-\/485 driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Can be true or false.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{driver__init_8h_a0e2042998b46f94173afbdccba3f46e7}\label{driver__init_8h_a0e2042998b46f94173afbdccba3f46e7}} 
+\index{driver\+\_\+init.\+h@{driver\+\_\+init.\+h}!led\+\_\+rx@{led\+\_\+rx}}
+\index{led\+\_\+rx@{led\+\_\+rx}!driver\+\_\+init.\+h@{driver\+\_\+init.\+h}}
+\subsubsection{\texorpdfstring{led\+\_\+rx()}{led\_rx()}}
+{\footnotesize\ttfamily void led\+\_\+rx (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Signal L\+ED used for presenting U\+S\+A\+RT occupancy while receiving bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Can be true or false.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{driver__init_8h_ab72fc3505dc15f487c8ed6805dd5792f}\label{driver__init_8h_ab72fc3505dc15f487c8ed6805dd5792f}} 
+\index{driver\+\_\+init.\+h@{driver\+\_\+init.\+h}!led\+\_\+tx@{led\+\_\+tx}}
+\index{led\+\_\+tx@{led\+\_\+tx}!driver\+\_\+init.\+h@{driver\+\_\+init.\+h}}
+\subsubsection{\texorpdfstring{led\+\_\+tx()}{led\_tx()}}
+{\footnotesize\ttfamily void led\+\_\+tx (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Signal L\+ED used for presenting U\+S\+A\+RT occupancy while sending bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Can be true or false.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{driver__init_8h_a51a480b70d8a5baac36017ca58cf974c}\label{driver__init_8h_a51a480b70d8a5baac36017ca58cf974c}} 
+\index{driver\+\_\+init.\+h@{driver\+\_\+init.\+h}!read\+\_\+byte@{read\+\_\+byte}}
+\index{read\+\_\+byte@{read\+\_\+byte}!driver\+\_\+init.\+h@{driver\+\_\+init.\+h}}
+\subsubsection{\texorpdfstring{read\+\_\+byte()}{read\_byte()}}
+{\footnotesize\ttfamily int32\+\_\+t read\+\_\+byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$const}]{buf }\end{DoxyParamCaption})}
+
+
+
+Read One byte from selected U\+S\+A\+RT interface. 
+
+\begin{DoxyNote}{Note}
+This function is called when I\+RQ occurs. U\+S\+A\+RT receive callback called it until received whole message, 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+rx\+\_\+cb\+\_\+modbus\+\_\+dependencies\+\_\+usart() implementation.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & One byte of data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error Code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{driver__init_8h_af4e1ab840f6e99b645ee7ba6a2977be3}\label{driver__init_8h_af4e1ab840f6e99b645ee7ba6a2977be3}} 
+\index{driver\+\_\+init.\+h@{driver\+\_\+init.\+h}!rs485\+\_\+interface\+\_\+init@{rs485\+\_\+interface\+\_\+init}}
+\index{rs485\+\_\+interface\+\_\+init@{rs485\+\_\+interface\+\_\+init}!driver\+\_\+init.\+h@{driver\+\_\+init.\+h}}
+\subsubsection{\texorpdfstring{rs485\+\_\+interface\+\_\+init()}{rs485\_interface\_init()}}
+{\footnotesize\ttfamily void rs485\+\_\+interface\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Init interfaces for R\+S-\/485 communication\+: U\+S\+A\+RT. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{driver__init_8h_a8f63fd31eb9ecde9b82e0ac6242ce1ad}\label{driver__init_8h_a8f63fd31eb9ecde9b82e0ac6242ce1ad}} 
+\index{driver\+\_\+init.\+h@{driver\+\_\+init.\+h}!timer\+\_\+init@{timer\+\_\+init}}
+\index{timer\+\_\+init@{timer\+\_\+init}!driver\+\_\+init.\+h@{driver\+\_\+init.\+h}}
+\subsubsection{\texorpdfstring{timer\+\_\+init()}{timer\_init()}}
+{\footnotesize\ttfamily uint8\+\_\+t timer\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Timer setup. This timer is used by Mod\+Bus library to timeout incoming traffic. 
+
+\begin{DoxyNote}{Note}
+That timer initially needs to be stopped.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Error Code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{driver__init_8h_a60a9a30a5d76665079791ca7cc91b7b0}\label{driver__init_8h_a60a9a30a5d76665079791ca7cc91b7b0}} 
+\index{driver\+\_\+init.\+h@{driver\+\_\+init.\+h}!timer\+\_\+start@{timer\+\_\+start}}
+\index{timer\+\_\+start@{timer\+\_\+start}!driver\+\_\+init.\+h@{driver\+\_\+init.\+h}}
+\subsubsection{\texorpdfstring{timer\+\_\+start()}{timer\_start()}}
+{\footnotesize\ttfamily int8\+\_\+t timer\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Start selected timer. 
+
+\begin{DoxyReturn}{Returns}
+Error Code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{driver__init_8h_a55d4933921d31503bc8287d7a8493402}\label{driver__init_8h_a55d4933921d31503bc8287d7a8493402}} 
+\index{driver\+\_\+init.\+h@{driver\+\_\+init.\+h}!timer\+\_\+stop@{timer\+\_\+stop}}
+\index{timer\+\_\+stop@{timer\+\_\+stop}!driver\+\_\+init.\+h@{driver\+\_\+init.\+h}}
+\subsubsection{\texorpdfstring{timer\+\_\+stop()}{timer\_stop()}}
+{\footnotesize\ttfamily uint8\+\_\+t timer\+\_\+stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stop selected timer. 
+
+\begin{DoxyReturn}{Returns}
+Error Code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{driver__init_8h_a776d70154bc52a4e1367f3477b8d7056}\label{driver__init_8h_a776d70154bc52a4e1367f3477b8d7056}} 
+\index{driver\+\_\+init.\+h@{driver\+\_\+init.\+h}!usart\+\_\+disable@{usart\+\_\+disable}}
+\index{usart\+\_\+disable@{usart\+\_\+disable}!driver\+\_\+init.\+h@{driver\+\_\+init.\+h}}
+\subsubsection{\texorpdfstring{usart\+\_\+disable()}{usart\_disable()}}
+{\footnotesize\ttfamily void usart\+\_\+disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable U\+S\+A\+RT interface. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{driver__init_8h_ab67bdf30284bb3029f490ce87644c786}\label{driver__init_8h_ab67bdf30284bb3029f490ce87644c786}} 
+\index{driver\+\_\+init.\+h@{driver\+\_\+init.\+h}!usart\+\_\+enable@{usart\+\_\+enable}}
+\index{usart\+\_\+enable@{usart\+\_\+enable}!driver\+\_\+init.\+h@{driver\+\_\+init.\+h}}
+\subsubsection{\texorpdfstring{usart\+\_\+enable()}{usart\_enable()}}
+{\footnotesize\ttfamily void usart\+\_\+enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable U\+S\+A\+RT interface. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{driver__init_8h_a543fcc6df3ddd976e52a923bcdb61505}\label{driver__init_8h_a543fcc6df3ddd976e52a923bcdb61505}} 
+\index{driver\+\_\+init.\+h@{driver\+\_\+init.\+h}!write\+\_\+byte@{write\+\_\+byte}}
+\index{write\+\_\+byte@{write\+\_\+byte}!driver\+\_\+init.\+h@{driver\+\_\+init.\+h}}
+\subsubsection{\texorpdfstring{write\+\_\+byte()}{write\_byte()}}
+{\footnotesize\ttfamily int32\+\_\+t write\+\_\+byte (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$const}]{buf }\end{DoxyParamCaption})}
+
+
+
+Write One byte on selected U\+S\+A\+RT interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & One byte of data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error Code 
+\end{DoxyReturn}
