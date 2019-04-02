@@ -10,17 +10,14 @@
 
 void rs485_interface_init(void)
 {
-
 }
 
 void usart_enable(void)
 {
-
 }
 
 void usart_disable(void)
 {
-
 }
 
 int32_t write_byte(const uint8_t* const buf)
@@ -37,21 +34,17 @@ int32_t read_byte(uint8_t* const buf)
 
 void gpio_set_re_pin_level(bool state)
 {
-
 }
 
 void gpio_set_de_pin_level(bool state)
 {
-
 }
 
 void led_tx(bool state)
 {
-
 }
 void led_rx(bool state)
 {
-
 }
 
 
@@ -69,4 +62,3 @@ uint8_t timer_stop()
 {
     return true;
 }
-

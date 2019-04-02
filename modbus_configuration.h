@@ -19,18 +19,19 @@
 /*@{*/
 
 /** Number of Holding Registers */
-#define HOLDING_REGISTER 	0
+#define HOLDING_REGISTER 0
 /** Number of Input Register */
-#define INPUT_REGISTER		0
+#define INPUT_REGISTER 0
 /** Number of Coils */
-#define COILS 			0
+#define COILS 0
 /** Number of Input Bits */
-#define INPUT_BITS 		0
+#define INPUT_BITS 0
 
 /**
  * @brief Enumerate defined holding registers. It will be used in registers table to discriminate holding registers.
  *
- * @note If you don't use holding registers comment this typedef enum. Most of compilers will raise error for empty enum.
+ * @note If you don't use holding registers comment this typedef enum. Most of compilers will raise error for empty
+enum.
  * Example of usage
 ~~~~~{.c}
 typedef enum {
@@ -75,7 +76,7 @@ extern modbus_variables_map_t modbus_variables_map;
 /**
  * @brief User defined registers. Here user need to map address stack define in modbus_variables_map_t struct to
  * Registers table.
- * 
+ *
  * Registers table consist following types:
  * 	- HoldingRegister[HOLDING_REGISTER]
  * 	- InputRegister[INPUT_REGISTER]
