@@ -1,0 +1,168 @@
+\hypertarget{group___insert}{}\section{how many Modbus registers you want to use in your project.}
+\label{group___insert}\index{how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmodbus__variables__map__t}{modbus\+\_\+variables\+\_\+map\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em define Modbus variable address stack. Type is modbus\+\_\+variable\+\_\+t. Example of usage 
+\begin{DoxyCode}
+\textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{
+   modbus\_variable\_t holding\_register\_1;
+\} \mbox{\hyperlink{structmodbus__variables__map__t}{modbus\_variables\_map\_t}};
+\end{DoxyCode}
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___insert_gae4693a6ca50104a719f8ed840bb419ac}{H\+O\+L\+D\+I\+N\+G\+\_\+\+R\+E\+G\+I\+S\+T\+ER}}~0
+\item 
+\#define \mbox{\hyperlink{group___insert_ga2f10b7e4e03726942f00d00c9888f2dc}{I\+N\+P\+U\+T\+\_\+\+R\+E\+G\+I\+S\+T\+ER}}~0
+\item 
+\#define \mbox{\hyperlink{group___insert_ga0b65fe24e4d83c129574194bea1ed036}{C\+O\+I\+LS}}~0
+\item 
+\#define \mbox{\hyperlink{group___insert_gaae865db01e31dbe4754638af380ff0d1}{I\+N\+P\+U\+T\+\_\+\+B\+I\+TS}}~0
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___insert_ga437be52e6b8688da8c4a21cd5adc7562}{holding\+\_\+register\+\_\+mapping\+\_\+t}} 
+\begin{DoxyCompactList}\small\item\em Enumerate defined holding registers. It will be used in registers table to discriminate holding registers. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___insert_ga6f58928e96a62a069ae49d5970382864}{input\+\_\+register\+\_\+mapping\+\_\+t}} 
+\begin{DoxyCompactList}\small\item\em Enumerate defined input registers. It will be used in registers table to discriminate input registers. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___insert_ga99c131df24fe52208d5876ebb4808cd1}{coil\+\_\+mapping\+\_\+t}} 
+\begin{DoxyCompactList}\small\item\em Enumerate defined coils. It will be used in registers table to discriminate coils. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___insert_ga6dbaaf108ca00d5dfd1037aadfc10f6f}{modbus\+\_\+register\+\_\+mapping\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em User defined registers. Here user need to map address stack define in \mbox{\hyperlink{structmodbus__variables__map__t}{modbus\+\_\+variables\+\_\+map\+\_\+t}} struct to Registers table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmodbus__variables__map__t}{modbus\+\_\+variables\+\_\+map\+\_\+t}} \mbox{\hyperlink{group___insert_gac4b2611d22ec97dbb04b0df3b535bd7b}{modbus\+\_\+variables\+\_\+map}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Supported types are H\+O\+L\+D\+I\+N\+G\+\_\+\+R\+E\+G\+I\+S\+T\+ER, I\+N\+P\+U\+T\+\_\+\+R\+E\+G\+I\+S\+T\+ER, C\+O\+I\+LS and I\+N\+P\+U\+T\+\_\+\+B\+I\+TS. If you don\textquotesingle{}t want to use any of registers types insert 0 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___insert_ga0b65fe24e4d83c129574194bea1ed036}\label{group___insert_ga0b65fe24e4d83c129574194bea1ed036}} 
+\index{how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}!C\+O\+I\+LS@{C\+O\+I\+LS}}
+\index{C\+O\+I\+LS@{C\+O\+I\+LS}!how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}}
+\subsubsection{\texorpdfstring{C\+O\+I\+LS}{COILS}}
+{\footnotesize\ttfamily \#define C\+O\+I\+LS~0}
+
+Number of Coils \mbox{\Hypertarget{group___insert_gae4693a6ca50104a719f8ed840bb419ac}\label{group___insert_gae4693a6ca50104a719f8ed840bb419ac}} 
+\index{how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}!H\+O\+L\+D\+I\+N\+G\+\_\+\+R\+E\+G\+I\+S\+T\+ER@{H\+O\+L\+D\+I\+N\+G\+\_\+\+R\+E\+G\+I\+S\+T\+ER}}
+\index{H\+O\+L\+D\+I\+N\+G\+\_\+\+R\+E\+G\+I\+S\+T\+ER@{H\+O\+L\+D\+I\+N\+G\+\_\+\+R\+E\+G\+I\+S\+T\+ER}!how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}}
+\subsubsection{\texorpdfstring{H\+O\+L\+D\+I\+N\+G\+\_\+\+R\+E\+G\+I\+S\+T\+ER}{HOLDING\_REGISTER}}
+{\footnotesize\ttfamily \#define H\+O\+L\+D\+I\+N\+G\+\_\+\+R\+E\+G\+I\+S\+T\+ER~0}
+
+Number of Holding Registers \mbox{\Hypertarget{group___insert_gaae865db01e31dbe4754638af380ff0d1}\label{group___insert_gaae865db01e31dbe4754638af380ff0d1}} 
+\index{how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}!I\+N\+P\+U\+T\+\_\+\+B\+I\+TS@{I\+N\+P\+U\+T\+\_\+\+B\+I\+TS}}
+\index{I\+N\+P\+U\+T\+\_\+\+B\+I\+TS@{I\+N\+P\+U\+T\+\_\+\+B\+I\+TS}!how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}}
+\subsubsection{\texorpdfstring{I\+N\+P\+U\+T\+\_\+\+B\+I\+TS}{INPUT\_BITS}}
+{\footnotesize\ttfamily \#define I\+N\+P\+U\+T\+\_\+\+B\+I\+TS~0}
+
+Number of Input Bits \mbox{\Hypertarget{group___insert_ga2f10b7e4e03726942f00d00c9888f2dc}\label{group___insert_ga2f10b7e4e03726942f00d00c9888f2dc}} 
+\index{how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}!I\+N\+P\+U\+T\+\_\+\+R\+E\+G\+I\+S\+T\+ER@{I\+N\+P\+U\+T\+\_\+\+R\+E\+G\+I\+S\+T\+ER}}
+\index{I\+N\+P\+U\+T\+\_\+\+R\+E\+G\+I\+S\+T\+ER@{I\+N\+P\+U\+T\+\_\+\+R\+E\+G\+I\+S\+T\+ER}!how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}}
+\subsubsection{\texorpdfstring{I\+N\+P\+U\+T\+\_\+\+R\+E\+G\+I\+S\+T\+ER}{INPUT\_REGISTER}}
+{\footnotesize\ttfamily \#define I\+N\+P\+U\+T\+\_\+\+R\+E\+G\+I\+S\+T\+ER~0}
+
+Number of Input Register 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___insert_ga99c131df24fe52208d5876ebb4808cd1}\label{group___insert_ga99c131df24fe52208d5876ebb4808cd1}} 
+\index{how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}!coil\+\_\+mapping\+\_\+t@{coil\+\_\+mapping\+\_\+t}}
+\index{coil\+\_\+mapping\+\_\+t@{coil\+\_\+mapping\+\_\+t}!how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}}
+\subsubsection{\texorpdfstring{coil\+\_\+mapping\+\_\+t}{coil\_mapping\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___insert_ga99c131df24fe52208d5876ebb4808cd1}{coil\+\_\+mapping\+\_\+t}}}
+
+
+
+Enumerate defined coils. It will be used in registers table to discriminate coils. 
+
+\mbox{\Hypertarget{group___insert_ga437be52e6b8688da8c4a21cd5adc7562}\label{group___insert_ga437be52e6b8688da8c4a21cd5adc7562}} 
+\index{how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}!holding\+\_\+register\+\_\+mapping\+\_\+t@{holding\+\_\+register\+\_\+mapping\+\_\+t}}
+\index{holding\+\_\+register\+\_\+mapping\+\_\+t@{holding\+\_\+register\+\_\+mapping\+\_\+t}!how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}}
+\subsubsection{\texorpdfstring{holding\+\_\+register\+\_\+mapping\+\_\+t}{holding\_register\_mapping\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___insert_ga437be52e6b8688da8c4a21cd5adc7562}{holding\+\_\+register\+\_\+mapping\+\_\+t}}}
+
+
+
+Enumerate defined holding registers. It will be used in registers table to discriminate holding registers. 
+
+\begin{DoxyNote}{Note}
+If you don\textquotesingle{}t use holding registers comment this typedef enum. Most of compilers will raise error for empty enum. Example of usage 
+\begin{DoxyCode}
+\textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{
+    HOLDING\_REGISTER\_1
+\} \mbox{\hyperlink{group___insert_ga437be52e6b8688da8c4a21cd5adc7562}{holding\_register\_mapping\_t}};
+\end{DoxyCode}
+ 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___insert_ga6f58928e96a62a069ae49d5970382864}\label{group___insert_ga6f58928e96a62a069ae49d5970382864}} 
+\index{how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}!input\+\_\+register\+\_\+mapping\+\_\+t@{input\+\_\+register\+\_\+mapping\+\_\+t}}
+\index{input\+\_\+register\+\_\+mapping\+\_\+t@{input\+\_\+register\+\_\+mapping\+\_\+t}!how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}}
+\subsubsection{\texorpdfstring{input\+\_\+register\+\_\+mapping\+\_\+t}{input\_register\_mapping\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___insert_ga6f58928e96a62a069ae49d5970382864}{input\+\_\+register\+\_\+mapping\+\_\+t}}}
+
+
+
+Enumerate defined input registers. It will be used in registers table to discriminate input registers. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___insert_ga6dbaaf108ca00d5dfd1037aadfc10f6f}\label{group___insert_ga6dbaaf108ca00d5dfd1037aadfc10f6f}} 
+\index{how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}!modbus\+\_\+register\+\_\+mapping\+\_\+init@{modbus\+\_\+register\+\_\+mapping\+\_\+init}}
+\index{modbus\+\_\+register\+\_\+mapping\+\_\+init@{modbus\+\_\+register\+\_\+mapping\+\_\+init}!how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}}
+\subsubsection{\texorpdfstring{modbus\+\_\+register\+\_\+mapping\+\_\+init()}{modbus\_register\_mapping\_init()}}
+{\footnotesize\ttfamily void modbus\+\_\+register\+\_\+mapping\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+User defined registers. Here user need to map address stack define in \mbox{\hyperlink{structmodbus__variables__map__t}{modbus\+\_\+variables\+\_\+map\+\_\+t}} struct to Registers table. 
+
+Registers table consist following types\+:
+\begin{DoxyItemize}
+\item Holding\+Register\mbox{[}H\+O\+L\+D\+I\+N\+G\+\_\+\+R\+E\+G\+I\+S\+T\+ER\mbox{]}
+\item Input\+Register\mbox{[}I\+N\+P\+U\+T\+\_\+\+R\+E\+G\+I\+S\+T\+ER\mbox{]}
+\item Coils\mbox{[}C\+O\+I\+LS\mbox{]}
+\item Input\+Bits\mbox{[}I\+N\+P\+U\+T\+\_\+\+B\+I\+TS\mbox{]}
+\end{DoxyItemize}
+
+Example of usage 
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \mbox{\hyperlink{group___insert_ga6dbaaf108ca00d5dfd1037aadfc10f6f}{modbus\_register\_mapping\_init}}(\textcolor{keywordtype}{void})
+\{
+    modbus\_variable\_init(&\mbox{\hyperlink{group___insert_gac4b2611d22ec97dbb04b0df3b535bd7b}{modbus\_variables\_map}}.holding\_register\_1, &HoldingRegister[
+      HOLDING\_REGISTER\_1]);
+\}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+modbus\+\_\+variable\+\_\+init() for details. 
+
+Register table in modbus.\+c for details.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group___insert_gac4b2611d22ec97dbb04b0df3b535bd7b}\label{group___insert_gac4b2611d22ec97dbb04b0df3b535bd7b}} 
+\index{how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}!modbus\+\_\+variables\+\_\+map@{modbus\+\_\+variables\+\_\+map}}
+\index{modbus\+\_\+variables\+\_\+map@{modbus\+\_\+variables\+\_\+map}!how many Modbus registers you want to use in your project.@{how many Modbus registers you want to use in your project.}}
+\subsubsection{\texorpdfstring{modbus\+\_\+variables\+\_\+map}{modbus\_variables\_map}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmodbus__variables__map__t}{modbus\+\_\+variables\+\_\+map\+\_\+t}} modbus\+\_\+variables\+\_\+map}
+

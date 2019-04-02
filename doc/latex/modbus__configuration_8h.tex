@@ -1,0 +1,44 @@
+\hypertarget{modbus__configuration_8h}{}\section{modbus\+\_\+configuration.\+h File Reference}
+\label{modbus__configuration_8h}\index{modbus\+\_\+configuration.\+h@{modbus\+\_\+configuration.\+h}}
+{\ttfamily \#include \char`\"{}modbus\+\_\+variable.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmodbus__variables__map__t}{modbus\+\_\+variables\+\_\+map\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em define Modbus variable address stack. Type is modbus\+\_\+variable\+\_\+t. Example of usage 
+\begin{DoxyCode}
+\textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{
+   modbus\_variable\_t holding\_register\_1;
+\} \mbox{\hyperlink{structmodbus__variables__map__t}{modbus\_variables\_map\_t}};
+\end{DoxyCode}
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___insert_gae4693a6ca50104a719f8ed840bb419ac}{H\+O\+L\+D\+I\+N\+G\+\_\+\+R\+E\+G\+I\+S\+T\+ER}}~0
+\item 
+\#define \mbox{\hyperlink{group___insert_ga2f10b7e4e03726942f00d00c9888f2dc}{I\+N\+P\+U\+T\+\_\+\+R\+E\+G\+I\+S\+T\+ER}}~0
+\item 
+\#define \mbox{\hyperlink{group___insert_ga0b65fe24e4d83c129574194bea1ed036}{C\+O\+I\+LS}}~0
+\item 
+\#define \mbox{\hyperlink{group___insert_gaae865db01e31dbe4754638af380ff0d1}{I\+N\+P\+U\+T\+\_\+\+B\+I\+TS}}~0
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___insert_ga437be52e6b8688da8c4a21cd5adc7562}{holding\+\_\+register\+\_\+mapping\+\_\+t}} 
+\begin{DoxyCompactList}\small\item\em Enumerate defined holding registers. It will be used in registers table to discriminate holding registers. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___insert_ga6f58928e96a62a069ae49d5970382864}{input\+\_\+register\+\_\+mapping\+\_\+t}} 
+\begin{DoxyCompactList}\small\item\em Enumerate defined input registers. It will be used in registers table to discriminate input registers. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___insert_ga99c131df24fe52208d5876ebb4808cd1}{coil\+\_\+mapping\+\_\+t}} 
+\begin{DoxyCompactList}\small\item\em Enumerate defined coils. It will be used in registers table to discriminate coils. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___insert_ga6dbaaf108ca00d5dfd1037aadfc10f6f}{modbus\+\_\+register\+\_\+mapping\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em User defined registers. Here user need to map address stack define in \mbox{\hyperlink{structmodbus__variables__map__t}{modbus\+\_\+variables\+\_\+map\+\_\+t}} struct to Registers table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmodbus__variables__map__t}{modbus\+\_\+variables\+\_\+map\+\_\+t}} \mbox{\hyperlink{group___insert_gac4b2611d22ec97dbb04b0df3b535bd7b}{modbus\+\_\+variables\+\_\+map}}
+\end{DoxyCompactItemize}

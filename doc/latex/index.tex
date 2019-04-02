@@ -1,0 +1,49 @@
+This is Modbus R\+TU slave library written in C99. It is intended to be used on a bare-\/metal device. Hardware communication interface needs to be implemented by the user. The usual communication interface is U\+A\+R\+T/\+U\+S\+A\+RT. Modbus itself needs to be configured by setting the number and type of wanted registers. Supported Modbus registers are\+:
+\begin{DoxyItemize}
+\item Holding Register
+\item Input Register
+\item Coils
+\item Input Bits
+\end{DoxyItemize}
+
+\section*{Usage}
+
+{\ttfamily \mbox{\hyperlink{driver__init_8h}{driver\+\_\+init.\+h}}} lists and describes interfaces that user needs to provide for establishing communication. This file needs to be included in user space. Three hardware interfaces are needed from M\+CU\+:
+\begin{DoxyItemize}
+\item timer -\/ with counter(\+I\+R\+Q) on every 1ms
+\item U\+A\+R\+T/\+U\+S\+A\+RT -\/ receiving bytes one by one. It is recommended to use both interrupts -\/ for Tx and Rx.
+\item Two signal diodes(optional) -\/ used to visualize bytes received and bytes transmited.
+\end{DoxyItemize}
+
+{\ttfamily \mbox{\hyperlink{modbus__configuration_8h}{modbus\+\_\+configuration.\+h}}} requires setup of Modbus interfaces. The following needs to be defined\+:
+\begin{DoxyItemize}
+\item Number of registers -\/ separatly for holding registers, input registers, coils and input bits. Eg\+: {\ttfamily \#define H\+O\+L\+D\+I\+N\+G\+\_\+\+R\+E\+G\+I\+S\+T\+ER 1}
+\item A unique name for each position in each register type. If you define 3 holding registers then you will define 3 different names in enumeration. Eg\+: {\ttfamily H\+O\+L\+D\+I\+N\+G\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+1}
+\item For each register type, define unique address in struct \mbox{\hyperlink{structmodbus__variables__map__t}{modbus\+\_\+variables\+\_\+map\+\_\+t}}. Eg\+: {\ttfamily modbus\+\_\+variable\+\_\+t holding\+\_\+register\+\_\+1;}
+\item Map all defined registers in \mbox{\hyperlink{group___insert_ga6dbaaf108ca00d5dfd1037aadfc10f6f}{modbus\+\_\+register\+\_\+mapping\+\_\+init()}}. Eg\+: {\ttfamily modbus\+\_\+variable\+\_\+init(\&modbus\+\_\+variables\+\_\+map.\+holding\+\_\+register\+\_\+1, \&Holding\+Register\mbox{[}H\+O\+L\+D\+I\+N\+G\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+1\mbox{]});}
+\end{DoxyItemize}
+
+\paragraph*{User space}
+
+These A\+PI functions need to be called before starting the manipulation of Modbus registers\+: 
+\begin{DoxyCode}
+//init all HW interfaces
+rs485\_interface\_init();
+
+//Init Modbus, set slave address
+modbus\_init(SLAVE\_ADDRESS);
+
+//Init your own reigsters
+modbus\_register\_mapping\_init();
+\end{DoxyCode}
+
+
+To set the value of any modbus reigster use\+: {\ttfamily modbus\+\_\+variable\+\_\+set\+\_\+value()}
+
+To read the current value of any register check the register\textquotesingle{}s array by navigating to wanted position\+:
+\begin{DoxyItemize}
+\item Holding\+Register\mbox{[}H\+O\+L\+D\+I\+N\+G\+\_\+\+R\+E\+G\+I\+S\+T\+ER\mbox{]}
+\item Input\+Register\mbox{[}I\+N\+P\+U\+T\+\_\+\+R\+E\+G\+I\+S\+T\+ER\mbox{]}
+\item Coils\mbox{[}C\+O\+I\+LS\mbox{]}
+\item Input\+Bits\mbox{[}I\+N\+P\+U\+T\+\_\+\+B\+I\+TS\mbox{]} 
+\end{DoxyItemize}
