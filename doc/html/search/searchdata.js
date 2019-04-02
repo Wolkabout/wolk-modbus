@@ -6,8 +6,7 @@ var indexSectionsWithContent =
   3: "glmrtuw",
   4: "m",
   5: "chi",
-  6: "hv",
-  7: "w"
+  6: "hv"
 };
 
 var indexSectionNames =
@@ -18,8 +17,7 @@ var indexSectionNames =
   3: "functions",
   4: "variables",
   5: "enums",
-  6: "groups",
-  7: "pages"
+  6: "groups"
 };
 
 var indexSectionLabels =
@@ -30,7 +28,6 @@ var indexSectionLabels =
   3: "Functions",
   4: "Variables",
   5: "Enumerations",
-  6: "Modules",
-  7: "Pages"
+  6: "Modules"
 };
 
