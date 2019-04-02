@@ -1,4 +1,11 @@
-# wolk-modbus
+```
+██╗    ██╗ ██████╗ ██╗     ██╗  ██╗     ███╗   ███╗ ██████╗ ██████╗ ██████╗ ██╗   ██╗███████╗
+██║    ██║██╔═══██╗██║     ██║ ██╔╝     ████╗ ████║██╔═══██╗██╔══██╗██╔══██╗██║   ██║██╔════╝
+██║ █╗ ██║██║   ██║██║     █████╔╝█████╗██╔████╔██║██║   ██║██║  ██║██████╔╝██║   ██║███████╗
+██║███╗██║██║   ██║██║     ██╔═██╗╚════╝██║╚██╔╝██║██║   ██║██║  ██║██╔══██╗██║   ██║╚════██║
+╚███╔███╔╝╚██████╔╝███████╗██║  ██╗     ██║ ╚═╝ ██║╚██████╔╝██████╔╝██████╔╝╚██████╔╝███████║
+ ╚══╝╚══╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝     ╚═╝     ╚═╝ ╚═════╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝
+```
 
 This is Modbus RTU slave library written in C99. It is intended to be used on a bare-metal device.
 Hardware communication interface needs to be implemented by the user. The usual communication interface is UART/USART. Modbus itself needs to be configured by setting the number and type of wanted registers.
