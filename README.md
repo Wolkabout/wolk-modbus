@@ -30,7 +30,7 @@ Supported Modbus registers are:
  * Map all defined registers in modbus_register_mapping_init(). Eg: `modbus_variable_init(&modbus_variables_map.holding_register_1, &HoldingRegister[HOLDING_REGISTER_1]);`
 
 #### User space
-These API functions need to be called before starting the manipulation of Modbus registers:
+These API functions need to be called **before** starting the manipulation of Modbus registers:
 ```
 //init all HW interfaces
 rs485_interface_init();
@@ -43,10 +43,14 @@ modbus_register_mapping_init();
 ```
 
 To set the value of any modbus reigster use:
-`modbus_variable_set_value()`
+
+>>`modbus_variable_set_value()`
 
 To read the current value of any register check the register's array by navigating to wanted position:
  * HoldingRegister[HOLDING_REGISTER]
  * InputRegister[INPUT_REGISTER]
  * Coils[COILS]
  * InputBits[INPUT_BITS]
+ 
+ This function must to be called periodically in loop(as often as it can):
+ >>`modbus_process()`
